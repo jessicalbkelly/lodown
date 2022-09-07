@@ -38,7 +38,7 @@ module.exports.identity = identity;
 /**
  * typeOf: returns the type of value as a string
  * @param {Any value} value : function takes in any input value
- * @returns {Value type} value: function returns type of value
+ * @return { String }: returns string of input value's datatype.
  */
 
  function typeOf(value) {
@@ -68,7 +68,7 @@ module.exports.identity = identity;
 module.exports.typeOf = typeOf;
 
 /**
- * first: tests an array to see if it is a) in fact an array, b) if a number is given
+ * first: function returns the 'first' n number of elements in input array.
  * @param {array} array : function takes in an array
  * @param {number} number: function takes in a number
  * @returns {array literal} []: if array is not an array, function returns []
@@ -96,7 +96,7 @@ module.exports.typeOf = typeOf;
 module.exports.first = first;
 
 /**
- * last: tests an array to see if it is a) in fact an array, b) if a number is given. If these are true returns last <number> items of <array>
+ * last: tests an array to see if it is an array and if a number is given. If both are true, it returns last <number> items of <array>.
  * @param {array} array : function takes in an array
  * @param {number} number: function takes in a number
  * @returns {array literal} []: if array is not an array, function returns []
@@ -124,7 +124,7 @@ module.exports.first = first;
 module.exports.last = last;
 
 /**
- * indexOf: tests an array to see if it is a) in fact an array, b) if a number is given. If these are true returns last <number> items of <array>
+ * indexOf: returns the index of target value in an array.
  * @param {array} array : function takes in an array
  * @param {Any value} value: function takes in a value
  * @returns {index of array} i: returns the index of <array> that is the first occurrance of <value>
@@ -447,10 +447,12 @@ module.exports.reduce = reduce;
 
 
 /**
- * extend: 1) Call <function> for every element in <collection> passing the arguments: previous result, element, index. 2) Use the return value of <function> as the "previous result" for the next iteration 3) On the very first iteration, use <seed> as the "previous result" 4) If no <seed> was given, use the first element/value of <collection> as <seed> and continue to the next element 5) After the last iteration, return the return value of the final <function> call
+ * extend: Should push values from multiple objects into the first object
  * @param {object} obj1, obj2, etc. : function takes 1 or more objects
  * @returns {object} obj1: Returns initial object with values of all other objects pushed into it
  */
+
+
 
  function extend (obj1, obj2, obj3){
     Object.assign(obj1, obj2, obj3);
